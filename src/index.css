@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*  html,
+body {
+   overflow: hidden; 
+  scrollbar-width: none;
+} *
+
+ html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+} */
+
+@layer components {
+  .mycontainer {
+    @apply mx-auto container px-40 py-16;
+  }
+}
+
+.manager-root {
+  font-family: 'DM Sans', sans-serif;
+}
+
+@keyframes lockPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+.lock-pulse {
+  animation: lockPulse 3s ease-in-out infinite;
+}
+
+@keyframes shieldSpin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(180deg) scale(1.15);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.shield-spin {
+  animation: shieldSpin 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.btn-credential {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.btn-credential::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(30, 58, 95, 0.15) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-credential:hover::before {
+  opacity: 1;
+}
+
+.btn-credential:hover {
+  border-color: rgba(59, 130, 246, 0.4) !important;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.08);
+}
+
+.divider-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(71, 85, 105, 0.4), transparent);
+}
+
+.cred-row:hover {
+  background: rgba(59, 130, 246, 0.04);
+}
+
+/* --- Manager.css --- */
+.floating-input {
+  background: rgba(8, 13, 24, 0.6);
+}
+
+.floating-label {
+  font-family: 'DM Mono', monospace;
+  text-transform: uppercase;
+  font-weight: 400;
+  left: 14px;
+  white-space: nowrap;
+}
+
+.manager-card {
+  background: rgb(6, 9, 18);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(51, 65, 85, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.manager-icon-container {
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.18);
+}
+
+.manager-show-hide-text {
+  font-family: 'DM Mono', monospace;
+  font-size: 7px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.manager-font-mono {
+  font-family: 'DM Mono', monospace;
+}
+
+.manager-add-btn {
+  font-family: 'DM Mono', monospace;
+  background: rgba(59, 130, 246, 0.05);
+}
+
+/* --- Navbar.css --- */
+.navbar-container {
+  background: rgba(8, 10, 18, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(51, 65, 85, 0.35);
+}
+
+.navbar-logo-text {
+  font-family: 'DM Mono', monospace;
+}
+
+.vault-link {
+  background: rgba(6, 9, 18, 0.6);
+}
+
+.vault-link-text {
+  font-family: 'DM Mono', monospace;
+}
+
+/* --- Vault.css --- */
+.vault-font-mono {
+  font-family: 'DM Mono', monospace;
+}
+
+.vault-back-link {
+  background: rgba(6, 9, 18, 0.6);
+}
+
+.vault-card {
+  background: rgb(6, 9, 18);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(51, 65, 85, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.vault-input {
+  background: rgba(8, 13, 24, 0.8);
+  font-family: 'DM Mono', monospace;
+}
+
+.vault-btn-save {
+  background: rgba(59, 130, 246, 0.06);
+  font-family: 'DM Mono', monospace;
+}
+
+.vault-btn-cancel {
+  background: rgba(8, 13, 24, 0.4);
+  font-family: 'DM Mono', monospace;
+}
