@@ -1,8 +1,8 @@
-# PassOP — Password Manager
+# CryptVault - Your Locally Encrypted Vault
 
-A client-side password manager built with React and Tailwind CSS. PassOP allows users to store, manage, and access credentials securely in their browser using AES-GCM encryption. The project focuses on usability, accessibility, and security-conscious design without relying on any backend or third-party storage.
+A client-side password manager built with React and Tailwind CSS. CryptVault allows users to store, manage, and access credentials securely in their browser using AES-GCM encryption. The project focuses on usability, accessibility, and security-conscious design without relying on any backend or third-party storage.
 
-**Live Demo:** [passop-vault.vercel.app](https://passop-vault.vercel.app)
+**Live Demo:** [cryptvault.vercel.app](https://cryptvault.vercel.app)
 
 ---
 
@@ -19,7 +19,7 @@ A client-side password manager built with React and Tailwind CSS. PassOP allows 
 
 ## Overview
 
-PassOP is a portfolio-grade password manager that runs entirely in the browser. All credentials are encrypted with AES-GCM using a master password before being stored in localStorage — no data is ever sent to any server. The project demonstrates practical React patterns, cryptographic security, form validation, accessibility-conscious UI, and thoughtful UX details that go beyond a basic CRUD implementation.
+CryptVault is a portfolio-grade password manager that runs entirely in the browser. All credentials are encrypted with AES-GCM using a master password before being stored in localStorage — no data is ever sent to any server. The project demonstrates practical React patterns, cryptographic security, form validation, accessibility-conscious UI, and thoughtful UX details that go beyond a basic CRUD implementation.
 
 ---
 
@@ -94,10 +94,10 @@ PassOP is a portfolio-grade password manager that runs entirely in the browser. 
 
 ```bash
 # Clone the repository
-git clone https://github.com/7Aryannn/passop.git
+git clone https://github.com/7Aryannn/cryptvault.git
 
 # Navigate to the project directory
-cd passop
+cd cryptvault
 
 # Install dependencies
 npm install

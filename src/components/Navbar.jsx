@@ -34,8 +34,8 @@ const Navbar = () => {
         </div>
 
         <span className="text-xl font-semibold tracking-[0.12em] navbar-logo-text">
-          <span className="text-slate-300">Pass</span>
-          <span className="text-blue-400">OP</span>
+          <span className="text-slate-300">Crypt</span>
+          <span className="text-blue-400">Vault</span>
         </span>
 
         <span className="text-slate-500 text-2xl font-light transition-transform duration-300 group-hover:translate-x-0.5">/&gt;</span>

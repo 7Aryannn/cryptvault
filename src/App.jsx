@@ -6,7 +6,7 @@ import Vault from './components/Vault'
 import MasterPasswordGate from './components/MasterPasswordGate'
 import { encryptData, decryptData } from './utils/cryptoUtils'
 
-const STORAGE_KEY = 'passop_credentials'
+const STORAGE_KEY = 'cryptvault'
 
 const App = () => {
   const [unlocked, setUnlocked] = useState(false)

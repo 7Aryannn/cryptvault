@@ -1,6 +1,6 @@
 const PBKDF2_ITERATIONS = 200000
-const SALT_KEY = 'passop_salt'
-const HASH_KEY = 'passop_hash'
+const SALT_KEY = 'cryptvault_salt'
+const HASH_KEY = 'cryptvault_hash'
 
 const encoder = new TextEncoder()
 const decoder = new TextDecoder()
@@ -46,7 +46,7 @@ export const hashMasterPassword = async (password) => {
   const encrypted = await crypto.subtle.encrypt(
     { name: 'AES-GCM', iv },
     key,
-    encoder.encode('passop_verify')
+    encoder.encode('cryptvault_verify')
   )
   const result = bytesToHex(iv) + ':' + bytesToHex(new Uint8Array(encrypted))
   localStorage.setItem(HASH_KEY, result)
@@ -64,7 +64,7 @@ export const verifyMasterPassword = async (password) => {
       key,
       hexToBytes(dataHex)
     )
-    return decoder.decode(decrypted) === 'passop_verify'
+    return decoder.decode(decrypted) === 'cryptvault_verify'
   } catch {
     return false
   }
@@ -99,5 +99,5 @@ export const decryptData = async (ciphertext, password) => {
 export const clearVaultData = () => {
   localStorage.removeItem(HASH_KEY)
   localStorage.removeItem(SALT_KEY)
-  localStorage.removeItem('passop_credentials')
+  localStorage.removeItem('cryptvault_credentials')
 }
