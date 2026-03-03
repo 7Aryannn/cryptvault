@@ -58,11 +58,20 @@ const MasterPasswordGate = ({ onUnlocked }) => {
             <h1 className="text-slate-200 text-base font-semibold tracking-wide vault-font-mono">
               {isSetup ? 'Create Master Password' : 'Unlock Vault'}
             </h1>
-            <p className="text-slate-600 text-xs mt-1 tracking-wide">
-              {isSetup
-                ? 'This password encrypts all your credentials.'
-                : 'Enter your master password to continue.'}
-            </p>
+            {isSetup ? (
+              <>
+                <p className="text-slate-600 text-xs mt-1 tracking-wide">
+                  This password encrypts all your credentials.
+                </p>
+                <p className="text-slate-600 text-xs tracking-wide">
+                  There is no recovery option — do not forget it.
+                </p>
+              </>
+            ) : (
+              <p className="text-slate-600 text-xs mt-1 tracking-wide">
+                Enter your master password to continue.
+              </p>
+            )}
           </div>
         </div>
 
