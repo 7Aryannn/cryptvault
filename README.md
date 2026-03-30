@@ -2,7 +2,7 @@
 
 A client-side password manager built with React and Tailwind CSS. CryptVault allows users to store, manage, and access credentials securely in their browser using AES-GCM encryption. The project focuses on usability, accessibility, and security-conscious design without relying on any backend or third-party storage.
 
-**Live Demo :** [cryptvault-local.vercel.app](https://cryptvault-local.vercel.app)
+**Live Demo:** [cryptvault-local.vercel.app](https://cryptvault-local.vercel.app)
 
 ---
 
