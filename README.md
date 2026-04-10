@@ -6,7 +6,7 @@ A client-side password manager built with React and Tailwind CSS. CryptVault all
 
 ---
 
-## Table of Contents:
+## Table of Contents :
 
 - [Overview](#overview)
 - [Features](#features)
